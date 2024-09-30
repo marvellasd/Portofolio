@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HI-Toyz</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">HI-<span>Toyz</span></a>
+
+        <div class="navbar-nav">
+            <a href="index.html">HOME</a>
+            <a href="products.html">PRODUCTS</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="event.html">EVENT</a>
+            <a href="registerus.html">REGISTER US</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a href="#" id="cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="favorite"><i data-feather="heart"></i></a>
+            <a href="#" id="hmenu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+
+    <section class="reg">
+        <div class="regs">
+            <h1>Registration <span>Form</span></h1>
+            <p>Be a part of our family and get the benefits!</p>
+        </div>
+    </section>
+
+    <!-- <section id="regist">
+        <div class="container">
+            <form method="post" enctype="multipart/form-data" id="Form1">
+                <h3>Your Profile</h3>
+                <input type="text" id="names" name="names" placeholder="Full Name" required>
+   
+                <input type="text" id="email" name="email" placeholder="Email" required>
+
+                <input type="password" id="password" name="password" placeholder="Password" required>
+
+                <input type="password" id="confirm" name="confirm" placeholder="Confirm Password" required>
+
+                <input type="checkbox" id="agree1" name="agree1" value="check" required>
+
+                <label for="agree1"> I agree to the terms and conditions</label><br>
+                <div class="btn-box">
+                    <button type="button" onclick="validation()" id="Next1">CONTINUE</button>
+                </div>
+            </form>
+
+            <form id="Form2">
+                <h3>Personal Information</h3>
+                <input type="number" placeholder="Phone Number" required>
+                <input type="date" placeholder="Date of Birth" required>
+                <label for="profpic">Profile Picture</label>
+                <input type="file" id="profpic">
+                <div class="btn-box">
+                    <button type="button" id="Back1">BACK</button>
+                    <button type="button" id="Next2">CONTINUE</button>
+                </div>
+            </form>
+
+            <form id="Form3">
+                <h3>Your Interest</h3>
+
+                <p>What kind of toys would you like to see more?</p>
+                <input type="radio" id="interest1" required>
+                <label for="interest1">Vehicle</label>
+                
+                <input type="radio" id="interest2" required>
+                <label for="interest2">Action Figure</label>
+                
+                <input type="radio" id="interest3" required>
+                <label for="interest3">Educational Toys</label>
+                
+                <input type="radio" id="interest4" required>
+                <label for="interest4">Building Blocks</label>
+
+                <input type="radio" id="interest5" required>
+                <label for="interest5">Dolls</label>
+                
+                <input type="radio" id="interest6" required>
+                <label for="interest6">Others</label>
+                
+                <div class="btn-box">
+                    <button type="button" id="Back2">BACK</button>
+                    <button type="button">SUBMIT</button>
+                </div>
+            </form>
+
+            <div class="step-row">
+                <div id="progress"></div>
+                <div class="step-col"><small>1</small></div>
+                <div class="step-col"><small>2</small></div>
+                <div class="step-col"><small>3</small></div>
+            </div>
+        </div>
+    </section> -->
+
+    <div id="regform">
+        <div class="container">
+            <form method="POST" enctype="multipart/form-data">
+                <div>
+                    <h3>Create New Account</h3>
+                </div>
+
+                <div>
+                    <label for="nama">Name</label><br>
+                    <input type="text" name="nama" id="nama" placeholder="Full Name" required/>
+                    <p style="color:red;" id="alertnama"></p><br>
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number</label><br>
+                    <input type="text" name="phone" id="phone" placeholder="Phone Number" required/>
+                    <p style="color:red;" id="alertphone"></p><br>
+                </div>
+                
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Gmail Address" required/>
+                    <p style="color:red;" id="alertemail"></p><br>
+                </div>
+                
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" required/>
+                    <p style="color:red;" id="alertpassword"></p><br>
+                </div>
+                
+                <div>
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required/>
+                    <p style="color:red;" id="alertconfirm_password"></p><br>
+                </div>
+        
+                <div>
+                    <label for="date">Date Of Birth</label>
+                    <input type="date" name="dob" id="dob" placeholder="Date of Birth" required/>
+                    <p style="color:red;" id="alertdob"></p><br>
+                </div>
+
+                <!-- <div>
+                    <label for="nama">Name</label><br>
+                    <input type="text" name="nama" id="nama" placeholder="Full Name" required/>
+                    <p style="color:red;" id="errornama"></p>
+                    <br>
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number</label><br>
+                    <input type="text" name="phone" id="phone" placeholder="Phone Number" required/>
+                    <p style="color:red;" id="alertphone"></p>
+                    <br>
+                </div>
+                
+                <div>
+                    <label for="email">Email</label><br>
+                    <input type="text" name="email" id="email" placeholder="Email Address" required/>
+                    <p style="color:red;" id="alertemail"></p>
+                    <br>
+                </div>
+                
+                <div>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" id="password" placeholder="Password" required/>
+                    <p style="color:red;" id="alertpassword"></p>
+                    <br>
+                </div>
+                
+                <div>
+                    <label for="confirm_password">Confirm Password</label><br>
+                    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required/>
+                    <p style="color:red;" id="alertconfirmpassword"></p>
+                    <br>
+                </div>
+        
+                <div>
+                    <label for="date">Date Of Birth</label><br>
+                    <input type="date" name="dates" id="dates" required/>
+                    <p style="color:red;" id="alertdates"></p>
+                    <br>
+                </div>
+
+                <div>
+                    <label for="profpic">Profile Picture</label><br>
+                    <input type="image" name="profpic" id="profpic"/>
+                    <p style="color:red;" id="alertprofpic"></p>
+                    <br>
+                </div>
+
+                <div class="choice">
+                    <input type="radio" id="choice" name="choice" required/>
+                    <label for="choice">Action Figure</label>
+                    <p style="color:red;" id="alertchoice"></p>
+                    <br>
+                </div> -->
+        
+                
+            </form>
+
+            <div class="choice">
+                <div>
+                    <label for="interests">Your Interest</label><br>
+                    <input type="radio" name="interests1" id="interests1"/>
+                    <label for="interests1">Action Figure</label><br>
+                    <input type="radio" name="interests2" id="interests2"/>
+                    <label for="interests2">Vehicle</label><br>
+                    <input type="radio" name="interests3" id="interests3"/>
+                    <label for="interests3">Educational Toy</label><br><br>
+                </div>
+    
+                <div>
+                    <label for="pic">Profile Picture</label><br>
+                    <input type="file" name="pic" id="pic" placeholder="Profile Picture"/><br><br>
+                </div>
+        
+                <div>
+                    <input type="checkbox" id="agreement" required/>
+                    <label for="agreement">I agree to the terms & conditions</label>
+                    <p style="color:red;" id="alertagreement"></p>
+                </div>
+    
+                <div class="btn-box">
+                    <button type="button" onclick="validation()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <form method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="nama">Nama : </label>
+            <input type="text" name="nama" id="nama"/>
+            <p style="color:red;" id="errornama"></p>
+        </div>
+        
+        <div>
+            <label for="email">Email : </label>
+            <input type="text" name="email" id="email"/>
+            <p style="color:red;" id="erroremail"></p>
+            typenya bisa email langsung validasi @, tapi utk project harus manual pake text
+        </div>
+        
+        <div>
+            <label for="password">Password : </label>
+            <input type="password" name="password" id="password"/>
+            <p style="color:red;" id="errorpassword"></p>
+        </div>
+        
+        <div>
+            <label for="confirm_password">Confirm Password : </label>
+            <input type="password" name="confirm_password" id="confirm_password"/>
+            <p style="color:red;" id="errorconfirm_password"></p>
+        </div>
+
+        <div>
+            <label for="date">Date Of Birth : </label>
+            <input type="date" name="dob" id="dob"/>
+            <p style="color:red;" id="errordob"></p>
+        </div>
+
+        <div>
+            <input type="checkbox" id="agreement"/>
+            <label for="agreement">I accept the EULA</label>
+            <p style="color:red;" id="erroragreement"></p>
+
+        </div>
+
+        <div>
+            <button type="button" onclick="validateForm()">Submit</button>
+        </div>
+    </form> -->
+
+    <section class="banner3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#527ae1" fill-opacity="1" d="M0,192L40,192C80,192,160,192,240,176C320,160,400,128,480,133.3C560,139,640,181,720,181.3C800,181,880,139,960,138.7C1040,139,1120,181,1200,192C1280,203,1360,181,1400,170.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <h6>HI-<span>Toyz</span></h6>
+            <h4>Contact Information</h4>
+            <p><strong>Address: </strong>1 Lombard Street, San Fransisco</p>
+            <p><strong>Phone: </strong>+01 2323 543</p>
+            <p><strong>Open Hours: </strong>Sunday - Monday, 8am - 8pm</p>
+            <p><strong>Email: </strong>hitoyz@gmail.com</p>
+            
+            <div class="follow">
+                <h4>Connect with Us</h4>
+                <div class="icon">
+                    <a href="#" id="ig"><i data-feather="instagram"></i></a>
+                    <a href="#" id="fb"><i data-feather="facebook"></i></a>
+                    <a href="#" id="yt"><i data-feather="youtube"></i></a>
+                    <a href="#" id="li"><i data-feather="linkedin"></i></a>
+                    <a href="#" id="tt"><i data-feather="twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>More to Explore</h4>
+            <a href="#">About Us</a>
+            <a href="#">Shipping Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Cookie Settings</a>
+            <a href="#">Customer Service</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Create New Account</a>
+            <a href="#">Sign In</a>
+            <a href="#">Change Profile</a>
+            <a href="#">Track Your Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Download Our App</h4>
+            <p>From Google Play or App Store</p>
+            <div class="row">
+                <img src="images/googleplay.jpg" alt="">
+                <img src="images/appstore.jpg" alt="">
+            </div>
+            <p>Payment Methods</p>
+            <img src="images/payment.png" alt="">
+        </div>
+
+    </footer>
+
+    <section class="copyright">
+        <p>© 2019, HI-Toyz. All Rights Reserved.</p>
+    </section>
+
+    <script>
+        feather.replace()
+    </script>
+
+    <script src="script.js"></script>
+
+    <!-- <script>
+        var Form1 = document.getElementById("Form1");
+        var Form2 = document.getElementById("Form2");
+        var Form3 = document.getElementById("Form3");
+
+        var Next1 = document.getElementById("Next1");
+        var Next2 = document.getElementById("Next2");
+        var Back1 = document.getElementById("Back1");
+        var Back2 = document.getElementById("Back2");
+
+        var progress = document.getElementById("progress");
+
+        Next1.onclick = function(){
+            Form1.style.left = "-450px";
+            Form2.style.left = "40px";
+            progress.style.width = "240px";
+        }
+
+        Next2.onclick = function(){
+            Form2.style.left = "-450px";
+            Form3.style.left = "40px";
+            progress.style.width = "360px";
+        }
+
+        Back1.onclick = function(){
+            Form1.style.left = "40px";
+            Form2.style.left = "450px";
+            progress.style.width = "120px";
+        }
+
+        Back2.onclick = function(){
+            Form2.style.left = "40px";
+            Form3.style.left = "450px";
+            progress.style.width = "240px";
+        }
+    </script> -->
+
+</body>
+</html>
